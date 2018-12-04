@@ -1,0 +1,10 @@
+;;; $ scheme < SICP.rkt
+
+;;; Practice 1.3
+(define (E13 x y z) 
+    (cond ((> x y) (cond ((> y z) (+ x y)) 
+                         (else (+ x z))))
+          (else (cond ((> x z) (+ x y)) 
+                 (else (+ y z))))))
+
+(E13 1 1 3)
