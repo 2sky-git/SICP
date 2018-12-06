@@ -1,8 +1,4 @@
 
-
-
-
-
 ; a b分别为下限和上限
 (define (Sum Term a Next b)
     (if (< b a)
