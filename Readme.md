@@ -20,6 +20,13 @@
 - 1.2.5 最大公约数(练习 1.20)
 - 1.2.6 实例： 素数检测(练习 1.21，练习 1.22，练习 1.23，练习 1.24，练习 1.25，练习 1.26，练习 1.27，练习 1.28)
 
+<font face="黑体">我是黑体字</font>
+<font face="微软雅黑">我是微软雅黑</font>
+<font face="STCAIYUN">我是华文彩云</font>
+<font color=#0099ff size=12 face="黑体">黑体</font>
+<font color=#00ffff size=3>null</font>
+<font color=gray size=5>gray</font>
+
 ### 1.3 用高阶函数做抽象
 - 1.3.1 过程作为参数(练习 1.29，练习 1.30，练习 1.31，练习 1.32，练习 1.33)
 - 1.3.2 用 lambda 构造过程(练习 1.34)
