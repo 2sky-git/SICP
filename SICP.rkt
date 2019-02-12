@@ -1,34 +1,30 @@
+(define (Integral-E f a b n)
+    (define (Next k)
+        (+ 1 k))
+    (define h (/ (- b a) n))
+    (define (Term k)
+        (* (y k) (factor k)))
+    (define (y k)
+        (f (+ a (* k h))))
+    (define (factor k)  
+        (cond ((or (= k 1) (= k n)) 1)
+            ((even? k) 2)
+            (else 4)))
+    (if (not (even? n))
+            (error "n can't be odd")
+            (* (/ h 3)
+               (Sum Term
+                    (exact->inexact 0)
+                    Next
+                    n))))   
 
 
-; a b分别为下限和上限
-(define (Sum Term a Next b)
-    (if (< b a)
-    0
-    (+ (Term a)
-       (Sum Term
-            (Next a)
-            Next
-            b))))
-(define (Sum-Int a b)
-    (define (Identify X) X)
-    (Sum Identify
-        a
-        1+
-        b))
-(Sum-Int 2 3)
-(define (Sum-Square a b)
-    (Sum square
-        a
-        1+
-        b))
-(Sum-Square 2 3)
-(define (Sum-Pi a b)
-    (Sum (lambda (i) (/ 1 (* i (+ i 2))))
-         a
-         (lambda (i) (+ 4 i))
-         b))
-(Sum-Pi 2 5)
 
+
+
+
+
+;;;;
 (define (Average a b)
     (/ (+ a b) 2))
 
